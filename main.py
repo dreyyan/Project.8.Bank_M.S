@@ -1,10 +1,10 @@
- # # # # # # # # # # # # # # # # # # # # # # #
-#        Project: Bank Management System      #
-#         Author: dreyyan                     #
-#       Language: Python                      #
-#   Date Started: 03/22/2025                  #
-#  Date Finished:                             #
- # # # # # # # # # # # # # # # # # # # # # # #
+ # # # # # # # # # # # # # # # # #
+#        Project: CashGO+         #
+#         Author: dreyyan         #
+#       Language: Python          #
+#   Date Started: 03/22/2025      #
+#  Date Finished: 04/07/2025      #
+ # # # # # # # # # # # # # # # # #
 
 ''' IMPORTS '''
 import time
@@ -27,7 +27,7 @@ def error_message(message):
 
 # UTILITY: Display header for the interface /w appropriate formatting
 def display_header(interface_name, space, is_odd):
-    line_delay_animation("[ BANK MANAGEMENT SYSTEM ]", 0.1)
+    line_delay_animation("       [ CashGO+ ]     ", 0.1)
     if is_odd:
         print(((space - 1) * '-'), end='') # Output spacing
     else:
