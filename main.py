@@ -1,19 +1,11 @@
- # # # # # # # # # # # # # # # # #
-#        Project: CashGO+         #
-#         Author: dreyyan         #
-#       Language: Python          #
-#   Date Started: 03/22/2025      #
-#  Date Finished: 04/07/2025      #
- # # # # # # # # # # # # # # # # #
-
 ''' IMPORTS '''
 import time
 import json
 
 ''' MODULES '''
-from modules.line_delay_animation import line_delay_animation
-from modules.clear_screen import clear_screen
-from modules.display_format import display_format
+from msys.line_delay_animation import line_delay_animation
+from msys.clear_screen import clear_screen
+from msys.display_format import display_format
 
 ''' UTILITIES '''
 # UTILITY: Simulate a time delay within specified seconds
