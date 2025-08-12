@@ -82,7 +82,7 @@ class Bank:
 
     def is_complete_information(self) -> bool:
         # If either information is incomplete, display an error
-        if self.account_holder or self.account_id or self.account_type:
+        if any (not x for x in (self.account_holder, self.account_id, self.account_type)):
             error_message("Invalid Access: Please make sure to fill out all account information")
             return False
         else: return True
@@ -205,7 +205,6 @@ class Bank:
                     error_message("Invalid choice, please enter 'yes' or 'no'")
                     continue
 
-
             # Display account holder's current balance
             self.display_current_balance()
             # Display common withdrawal amounts
@@ -240,6 +239,7 @@ class Bank:
                     if withdrawal_amount > self.balance:
                         error_message("Withdrawal amount exceeds current balance")
                         continue
+                    else: break
 
                 else: break
 
@@ -358,6 +358,10 @@ class Bank:
 
             except ValueError:
                     error_message("Invalid choice, please enter a digit")
+
+        # Set new account type
+        account_type_dict = {1: "Savings", 2: "Checking", 3: "Current"}
+        self.account_type = account_type_dict.get(input_account_type)
 
         clear_screen()
         display_header("EDIT INFORMATION", 4, False)
